@@ -18,19 +18,19 @@ public class Main {
                 pila.add(values[i]);
             }
             if(values[i]== '}' || values[i] == ')'){
-                if(values[i] ==')' && pila.pop()!= '('){
+                if(values[i] ==')' && !pila.isEmpty() && pila.pop()!= '('){
                     validador= false;
                     break;
                 }
 
-                if(values[i] ==')' &&  pila.pop()== '('){
+                if(values[i] ==')' && !pila.isEmpty() &&  pila.pop()== '('){
                     validador= true;
                 }
-                if(values[i] =='}' && pila.pop()!= '{'){
+                if(values[i] =='}'  && !pila.isEmpty() && pila.pop()!= '{'){
                     validador= false;
                     break;
                 }
-                if(values[i] =='}' && pila.pop()!= '{'){
+                if(values[i] =='}' && !pila.isEmpty() && pila.pop()!= '{'){
                     validador= true;
 
                 }
